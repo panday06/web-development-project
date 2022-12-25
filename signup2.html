@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css.css">
+<style>
+body{ 
+     text-align:center;
+        }
+</style>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["name"].value;
+  let y = document.forms["myForm"]["age"].value;
+  let z = document.forms["myForm"]["email"].value;
+  let q = document.forms["myForm"]["uname"].value;
+  let p = document.forms["myForm"]["password"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  else if(y==""){
+    alert("Age must be filled out");
+    return false;
+  }
+  else if(z==""){
+    alert("Email must be filled out");
+    return false;
+  }
+  else if(q==""){
+    alert("User name must be filled out");
+    return false;
+  }
+  else if(p.length<6){
+      alert("Age should be greater than 17");
+      return false;
+}
+ else {
+      return true;
+}
+function msg(){
+alert("Your response is submitted")
+}
+}
+</script>
+</head>
+<body>
+<h1 style="text-align:center">Robots And<br> Robotics</h1>
+<h2 style="text-align:center">Signup Form</h2>
+<form name="myForm" onsubmit="return validateForm()" method="post">
+Name:*<br>
+<input type="text" name="name" required><br>
+Age:*<br>
+<input type="text" name="age" required><br>
+Gender:<br>
+<input type="radio" name="gender">Male<br>
+<input type="radio" name="gender">Female<br>
+Email address:*<br>
+<input type="email" name="email" required><br>
+Username:*<br>
+<input type="text" name="uname" required><br>
+Password:*<br>
+<input type="password" name"password"><br>
+<input type="submit" value="signup">
+</form>
+<h2>We will get in touch with you via email as soon as possible after successful registration</h2> 
+</body>
+</html>
